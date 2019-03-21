@@ -1,0 +1,204 @@
+{
+  "interpreterSettings": {
+    "spark": {
+      "id": "spark",
+      "name": "spark",
+      "group": "spark",
+      "properties": {
+        "zeppelin.spark.concurrentSQL": {
+          "name": "zeppelin.spark.concurrentSQL",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.R.knitr": {
+          "name": "zeppelin.R.knitr",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.R.cmd": {
+          "name": "zeppelin.R.cmd",
+          "value": "R",
+          "type": "string"
+        },
+        "spark.hadoop.fs.s3a.endpoint": {
+          "name": "spark.hadoop.fs.s3a.endpoint",
+          "value": "s3.<region>.amazonaws.com",
+          "type": "string"
+        },
+        "zeppelin.R.image.width": {
+          "name": "zeppelin.R.image.width",
+          "value": "100%",
+          "type": "number"
+        },
+        "zeppelin.spark.importImplicit": {
+          "name": "zeppelin.spark.importImplicit",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.dep.additionalRemoteRepository": {
+          "name": "zeppelin.dep.additionalRemoteRepository",
+          "value": "spark-packages,http://dl.bintray.com/spark-packages/maven,false;",
+          "type": "textarea"
+        },
+        "spark.hadoop.fs.s3a.impl": {
+          "name": "spark.hadoop.fs.s3a.impl",
+          "value": "org.apache.hadoop.fs.s3a.S3AFileSystem",
+          "type": "string"
+        },
+        "zeppelin.dep.localrepo": {
+          "name": "zeppelin.dep.localrepo",
+          "value": "local-repo",
+          "type": "string"
+        },
+        "zeppelin.spark.sql.stacktrace": {
+          "name": "zeppelin.spark.sql.stacktrace",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.spark.useHiveContext": {
+          "name": "zeppelin.spark.useHiveContext",
+          "value": true,
+          "type": "checkbox"
+        },
+        "spark.hadoop.fs.s3a.aws.credentials.provider": {
+          "name": "spark.hadoop.fs.s3a.aws.credentials.provider",
+          "value": "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider",
+          "type": "string"
+        },
+        "zeppelin.spark.printREPLOutput": {
+          "name": "zeppelin.spark.printREPLOutput",
+          "value": true,
+          "type": "checkbox"
+        },
+        "spark.cores.max": {
+          "name": "spark.cores.max",
+          "value": "64",
+          "type": "number"
+        },
+        "spark.executor.memory": {
+          "name": "spark.executor.memory",
+          "value": "",
+          "type": "string"
+        },
+        "zeppelin.spark.sql.interpolation": {
+          "name": "zeppelin.spark.sql.interpolation",
+          "value": true,
+          "type": "checkbox"
+        },
+        "spark.hadoop.fs.s3a.secret.key": {
+          "name": "spark.hadoop.fs.s3a.secret.key",
+          "value": "<secret-key>",
+          "type": "string"
+        },
+        "spark.app.name": {
+          "name": "spark.app.name",
+          "value": "Zeppelin Spark Cluster",
+          "type": "string"
+        },
+        "spark.hadoop.fs.s3a.access.key": {
+          "name": "spark.hadoop.fs.s3a.access.key",
+          "value": "<access-key>",
+          "type": "string"
+        },
+        "zeppelin.spark.maxResult": {
+          "name": "zeppelin.spark.maxResult",
+          "value": "1000",
+          "type": "number"
+        },
+        "zeppelin.spark.ui.hidden": {
+          "name": "zeppelin.spark.ui.hidden",
+          "value": false,
+          "type": "checkbox"
+        },
+        "master": {
+          "name": "master",
+          "value": "spark://spark-master:7077",
+          "type": "string"
+        },
+        "zeppelin.pyspark.python": {
+          "name": "zeppelin.pyspark.python",
+          "value": "python3",
+          "type": "string"
+        },
+        "args": {
+          "name": "args",
+          "value": "",
+          "type": "textarea"
+        },
+        "zeppelin.spark.enableSupportedVersionCheck": {
+          "name": "zeppelin.spark.enableSupportedVersionCheck",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.spark.useNew": {
+          "name": "zeppelin.spark.useNew",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.pyspark.useIPython": {
+          "name": "zeppelin.pyspark.useIPython",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.spark.uiWebUrl": {
+          "name": "zeppelin.spark.uiWebUrl",
+          "value": "",
+          "type": "string"
+        },
+        "zeppelin.R.render.options": {
+          "name": "zeppelin.R.render.options",
+          "value": "out.format \u003d \u0027html\u0027, comment \u003d NA, echo \u003d FALSE, results \u003d \u0027asis\u0027, message \u003d F, warning \u003d F, fig.retina \u003d 2",
+          "type": "textarea"
+        }
+      },
+      "dependencies": [
+        {
+          "groupArtifactVersion": "mysql:mysql-connector-java:8.0.15",
+          "local": false
+        },
+        {
+          "groupArtifactVersion": "org.postgresql:postgresql:42.2.5",
+          "local": false
+        },
+        {
+          "groupArtifactVersion": "org.apache.hadoop:hadoop-aws:2.7.7",
+          "local": false,
+          "exclusions": [
+            "com.fasterxml.jackson.core:jackson-core:2.2.3",
+            "com.fasterxml.jackson.core:jackson-databind:2.2.3",
+            "com.fasterxml.jackson.core:jackson-annotations:2.2.3"
+          ]
+        },
+        {
+          "groupArtifactVersion": "com.amazonaws:aws-java-sdk:1.7.4",
+          "local": false,
+          "exclusions": [
+            "com.fasterxml.jackson.core:jackson-core:2.1.1",
+            "com.fasterxml.jackson.core:jackson-databind:2.1.1",
+            "com.fasterxml.jackson.core:jackson-annotations:2.1.1"
+          ]
+        },
+        {
+          "groupArtifactVersion": "org.apache.commons:commons-lang3:3.8.1",
+          "local": false,
+          "exclusions": []
+        },
+        {
+          "groupArtifactVersion": "javax.servlet:javax.servlet-api:3.1.0",
+          "local": false,
+          "exclusions": []
+        }
+      ],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "owners": [],
+        "isUserImpersonate": false
+      }
+    }
+  }
+}
